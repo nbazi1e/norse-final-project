@@ -33,11 +33,24 @@ You:
 …
 You monster: You Monster! What is wrong with you? Have you no respect for human life?
 
-
-
 If 1 is picked-
 AI: I want to play with your life! Solve this puzzle if you want to live! *user will start to play a puzzle of inputing whatever is asked as fast as possible*
 
 If 2 is picked- 
 The AI self-destructs blowing you up and killing you because “you got on its nerves”.
+
+If puzzle is solved-
+You: Idiot AI!  That was way toooo easy.
+
+AI: Okay, how bout you solve this one. You will never!
+
+*new puzzle*
+
+If solved again- 
+You: Aha! I’m a genius. *activates escape pod*
+
+AI: How? Well I guess I’m going to die. YAY!
+
+You: *leaves the ship and lands back on Earth safe*
+
 */
