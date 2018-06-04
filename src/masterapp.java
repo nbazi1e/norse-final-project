@@ -67,35 +67,72 @@ public class masterapp
         final TerminalPosition boxpos = new TerminalPosition(1,20);
         final TerminalSize termsize = new TerminalSize(70,3);
         
+        //Variable to keep track of lines number
+        int linenum = 1;
+        
         
         //Section 1
-        KeyStroke keyStroke = terminal.readInput();
+        KeyStroke keyStroke = new KeyStroke(KeyType.Delete);
         
-        while (keyStroke.getKeyType() != KeyType.Escape)
+        //While loop to pause execution until next button is pressed
+        while (keyStroke.getKeyType() != KeyType.Enter)
         {
-	        
-	        txt.putString(1,1,lines.AIline1);
+	        //Print first AI line
+	        txt.putString(1,1, lines.AIline1);
+	        linenum++;
 	        
 	        //Draw answer prompt box
 	        txt.drawRectangle(boxpos, termsize, '-');
 	        txt.putString(3,21, "F1 - " + lines.playerline1);
 	        screen.refresh();
-	
 	        
-	        
+	        //Wait for input to continnue
 	        keyStroke = terminal.readInput();
 	        
+	        //If F1 is presses
 	        if(keyStroke.getKeyType() == KeyType.F1)
 	        {
-	        	txt.putString(1,2, lines.playerline2p1);
-	        	screen.refresh();
-	        	txt.putString(1,3, lines.playerline2p2);
-	        	Thread.sleep(500);
+	        	//Draw player lines for F1
+	        	txt.putString(1,2,lines.playerline1);
 	        	screen.refresh();
 	        	
 	        }	
 	        keyStroke = terminal.readInput();
-        }
+        }  
+        
+	    //Section 2
+        KeyStroke keyStroke2 = new KeyStroke(KeyType.Delete);
+	    while (keyStroke2.getKeyType() != KeyType.Enter)
+	        {
+	    	    //Clear screen and redraw previous lines and answer box
+	        	screen.clear();
+	        	txt.drawRectangle(boxpos, termsize, '-');
+	        	txt.putString(1,1, lines.AIline1);
+	        	txt.putString(1,2,lines.playerline1);
+	        	
+	        	//Draw AI new line
+	        	txt.putString(1,3, lines.AIline2);
+	        	
+	        	//Draw player line option in answer box
+	        	txt.putString(3,21, "F1 - " + lines.playerline2p1);
+	        	
+	        	screen.refresh();
+	        	
+	        	//If F1 is pressed
+	        	if(keyStroke2.getKeyType() == KeyType.F1)
+		        {
+		        	
+		        	txt.putString(1,4,lines.playerline2p1);
+		        	screen.refresh();
+		        	Thread.sleep(1000);
+		        	txt.putString(1,5,lines.playerline2p2);
+		        	screen.refresh();
+		        }	
+	        	//"Listen" for Enter key press to continue
+	        	keyStroke2 = terminal.readInput();
+	        }
+	        
+        
 		}
 		catch(IOException e) 
 		{
