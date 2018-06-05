@@ -67,9 +67,6 @@ public class masterapp
         final TerminalPosition boxpos = new TerminalPosition(1,20);
         final TerminalSize termsize = new TerminalSize(70,3);
         
-        //Variable to keep track of lines number
-        int linenum = 1;
-        
         
         //Section 1
         KeyStroke keyStroke = new KeyStroke(KeyType.Delete);
@@ -79,14 +76,13 @@ public class masterapp
         {
 	        //Print first AI line
 	        txt.putString(1,1, lines.AIline1);
-	        linenum++;
 	        
 	        //Draw answer prompt box
 	        txt.drawRectangle(boxpos, termsize, '-');
 	        txt.putString(3,21, "F1 - " + lines.playerline1);
 	        screen.refresh();
 	        
-	        //Wait for input to continnue
+	        //Wait for input to continue
 	        keyStroke = terminal.readInput();
 	        
 	        //If F1 is presses
