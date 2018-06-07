@@ -314,16 +314,6 @@ public class test
 			        	txt.setForegroundColor(TextColor.ANSI.WHITE);
 			        	txt.setBackgroundColor(TextColor.ANSI.BLACK);
 			        	
-//			        	//draw tic tac toe board
-//			        	//draw vertical lines
-//			        	txt.drawLine(3, 1, 3, 5, '|');
-//			        	txt.drawLine(8, 1, 8, 5, '|');
-//			        	//draw hrizontol lines
-//			        	txt.drawLine(1, 1, 1, 5, '-');
-//			        	txt.drawLine(6, 1, 6, 5, '-');
-//			        	txt.drawLine(11, 1, 11, 5, '-');
-//			        	screen.refresh();
-//			        	Thread.sleep(5000);
 			        	
 			        	final TerminalPosition hackbox1pos = new TerminalPosition(1, 5);
 			        	final TerminalPosition hackbox2pos = new TerminalPosition(26, 5);
@@ -336,17 +326,150 @@ public class test
 			           txt.fillRectangle(hackbox2pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.RED));
 			           txt.fillRectangle(hackbox3pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.MAGENTA));
 			           txt.fillRectangle(hackbox4pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.YELLOW));
-			           
-
-			           
-			           
+			
 			           screen.refresh();
-			           Thread.sleep(10000);
+			           
+			          
+			          String box1color = "Green";
+			          String box2color = "Red";
+			          String box3color = "Magenta";
+			          String box4color = "Yellow";
+			          
+			          boolean puzzleIsSolved = false;
+			          
+			          while(puzzleIsSolved == false)
+			          {
+				          keyStroke = screen.readInput();
+				          
+			        	  if(keyStroke.getKeyType() == KeyType.F1)
+			        	  {
+			        		  switch(box1color)
+			        		  {
+			        		  	case "Green":
+			        		  		txt.fillRectangle(hackbox1pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.YELLOW));
+			        		  		box1color = "Yellow";
+			        		  		screen.refresh();
+			        		  		break;
+			        		  		
+			        		  	case "Yellow":
+			        		  		txt.fillRectangle(hackbox1pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.RED));
+			        		  		box1color = "Red";
+			        		  		screen.refresh();
+			        		  		break;
+			        		  		
+			        		  	case "Red":
+			        		  		txt.fillRectangle(hackbox1pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.BLUE));
+			        		  		box1color = "Blue";
+			        		  		screen.refresh();
+			        		  		break;
+			        		  		
+			        		  	case "Blue":
+			        		  		screen.refresh();
+			        		  		break;
+			        		  		
+			        		  		
+			        		  		
+			        		  		
+			        		  }
+			        	  }
 			        	
 			        	
-			        	
-			        	
-			        	
+						   else if(keyStroke.getKeyType() == KeyType.F2)
+						   {
+							   switch(box2color)
+				        		  {
+				        		  	case "Red":
+				        		  		txt.fillRectangle(hackbox2pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.GREEN));
+				        		  		box2color = "Green";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  		
+				        		  	case "Green":
+				        		  		txt.fillRectangle(hackbox2pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.MAGENTA));
+				        		  		box2color = "Magenta";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  		
+				        		  	case "Magenta":
+				        		  		txt.fillRectangle(hackbox2pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.BLUE));
+				        		  		box2color = "Blue";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  	
+				        		  	case "Blue":
+				        		  		screen.refresh();
+				        		  		break;
+				        		  		
+				        		  }
+						   }
+						   else if(keyStroke.getKeyType() == KeyType.F3)
+						   {
+							   switch(box3color)
+				        		  {
+				        		  	case "Magenta":
+				        		  		txt.fillRectangle(hackbox3pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.RED));
+				        		  		box3color = "Red";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  		
+				        		  		
+				        		  	case "Red":
+				        		  		txt.fillRectangle(hackbox3pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.YELLOW));
+				        		  		box3color = "Yellow";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  		
+				        		  	case "Yellow":
+				        		  		txt.fillRectangle(hackbox3pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.BLUE));
+				        		  		box3color = "Blue";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  	
+				        		  	case "Blue":
+				        		  		screen.refresh();
+				        		  		break;
+				        		  }
+						   }
+			        	  
+						   else if(keyStroke.getKeyType() == KeyType.F4)
+						   {
+							   switch(box4color)
+				        		  {
+				        		  	case "Yellow":
+				        		  		txt.fillRectangle(hackbox4pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.CYAN));
+				        		  		box4color = "Cyan";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  		
+				        		  	case "Cyan":
+				        		  		txt.fillRectangle(hackbox4pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.WHITE));
+				        		  		box4color = "White";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  		
+				        		  	case "White":
+				        		  		txt.fillRectangle(hackbox4pos, hackboxsize, new TextCharacter(' ', TextColor.ANSI.DEFAULT, TextColor.ANSI.BLUE));
+				        		  		box4color = "Blue";
+				        		  		screen.refresh();
+				        		  		break;
+				        		  	
+				        		  	case "Blue":
+				        		  		screen.refresh();
+				        		  		break;
+				        		  }
+						   }
+			        	  
+			        	  screen.refresh();
+			        	  if(box1color == "Blue" && box2color == "Blue" && box3color == "Blue" && box4color == "Blue")
+			        	  {
+			        		  break;
+			        	  }
+
+			        		  
+			          }
+			          
+			          //Section 7
+			          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			        	
 			        	
 			        	
