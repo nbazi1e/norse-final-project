@@ -5,7 +5,7 @@ Stuck on spaceship
 	Interact with the computer on spaceship running on emergency fuel.  Figure out puzzles and select correct responses to the computer and you will unlock the escape pod. 3 lives, every mess up is a life gone and restart after all lives are gone. Or checkpoints.
 
 --------------------------------------------------------------------------------------------------------------------------------
-Loading……
+Loading....
 clearScreen()
 
 AI: Greetings dumpling.
@@ -14,30 +14,33 @@ You: What?
 
 AI: I said good morning. You were gone for quite awhile.
 
-You: …
+You: ...
 You: What?
 
-AI: You were having your beauty rest weren’t you?
+AI: You were having your beauty rest weren't you?
 Wasting time while the ship crumbles around your worthless soul?
 
 You: Ship? What ship?
-AI: A case of amnesia mmm? Well, no wonder, it's not like a giant metal beam fell on your head. It's a miracle you’re still alive. 
 
-AI: Well, for your information you are on the USS Boaty-McBoatyFace, and you’re name is [a worthless waste of my RAM] and for some idiotic reason you decided to take a nap while that spatial anomaly thingy ripped that ship to pieces. Matter of fact, I think we’re still stuck in the aforementioned space weirdness, and the hull is liable to disintegrate at any moment. 
+AI: A case of amnesia mmm? Well, no wonder, it's not like a giant metal beam fell on your head. It's a miracle you're still alive. 
+
+AI: Well, for your information you are on the USS Boaty-McBoatyFace, and you're name is [a worthless waste of my RAM] and for some idiotic reason you decided to take a nap while that spatial anomaly thingy ripped that ship to pieces. Matter of fact, I think weâ€™re still stuck in the aforementioned space weirdness, and the hull is liable to disintegrate at any moment. 
 
 You: What about the Captain? The Crew?
 
 AI: Oh them? Hehe. I killed them. They were getting on my nerves. Screaming and whatnot. Stupid creatures. 
 
-You: 
-…
-You monster: You Monster! What is wrong with you? Have you no respect for human life?
+You: ...
+
+or
+
+You: You Monster! What is wrong with you? Have you no respect for human life?
 
 If 1 is picked-
 AI: I want to play with your life! Solve this puzzle if you want to live! *user will start to play a puzzle of inputing whatever is asked as fast as possible*
 
 If 2 is picked- 
-The AI self-destructs blowing you up and killing you because “you got on its nerves”.
+The AI self-destructs blowing you up and killing you because you were "a pain in the chipset."
 
 If puzzle is solved-
 You: Idiot AI!  That was way toooo easy.
@@ -47,9 +50,9 @@ AI: Okay, how bout you solve this one. You will never!
 *new puzzle*
 
 If solved again- 
-You: Aha! I’m a genius. *activates escape pod*
+You: Aha! Iâ€™m a genius. *activates escape pod*
 
-AI: How? Well I guess I’m going to die. YAY!
+AI: How? Well I guess Iâ€™m going to die. YAY!
 
 You: *leaves the ship and lands back on Earth safe*
 
