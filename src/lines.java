@@ -25,23 +25,23 @@ public class lines {
 	
 	
 	//All player lines
-	public static String playerline1 = "What?";
+	public static String playerline1 = "> What?";
 	
-	public static String playerline2p1 = "...";
-	public static String playerline2p2 = "What?";
+	public static String playerline2p1 = "> ...";
+	public static String playerline2p2 = "> What?";
 	
-	public static String playerline3 = "Ship? What ship?";
+	public static String playerline3 = "> Ship? What ship?";
 	
-	public static String playerline4 = "What about the Captain? The Crew?";
+	public static String playerline4 = "> What about the Captain? The Crew?";
 	
-	public static String playerline5v1 = "...";
+	public static String playerline5v1 = "> ...";
 	
-	public static String playerline5v2 = "You Monster! What is wrong with you? Have you no respect for human life?";
+	public static String playerline5v2 = "> You Monster! What is wrong with you? Have you no respect for human life?";
 	
-	public static String playerline6 = "Idiot AI!  That was way toooo easy.";
+	public static String playerline6 = "> Idiot AI!  That was way toooo easy.";
 	
-	public static String playerline7 = "Eureka! I'm a genius. *activates escape pod*";
+	public static String playerline7 = "> Eureka! I'm a genius. *activates escape pod*";
 	
-	public static String playerline8 = "*escapes from the exploding USS Boaty-McBoatyFace and is rescued*";
+	public static String playerline8 = "> *escapes from the exploding USS Boaty-McBoatyFace and is rescued*";
 }
 
